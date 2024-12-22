@@ -1,0 +1,219 @@
+/* Reset and Box Model */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background: url('images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+/* CSS for smooth transition */
+body {
+  transition: opacity 1s ease;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+/* Main Menu Container */
+#main-menu {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 400px;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Logo Section */
+#logo-container {
+  margin-bottom: 20px;
+}
+
+#game-logo {
+  width: 180px;
+  height: auto;
+  animation: bounceIn 1s ease-in-out;
+}
+
+/* Game Title */
+#game-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #ffd700;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  letter-spacing: 1.5px;
+  animation: slideDown 0.8s ease-out;
+}
+
+/* Menu Buttons */
+#menu-buttons {
+  margin-bottom: 30px;
+}
+
+.menu-button {
+  background: linear-gradient(135deg, #ffcc00, #ff9900);
+  border: none;
+  padding: 15px 25px;
+  margin: 10px;
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.menu-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.menu-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Sound Controls */
+#sound-controls {
+  margin-top: 20px;
+}
+
+.sound-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 5px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.sound-button:hover {
+  color: #ffd700;
+  transform: scale(1.1);
+}
+
+/* Settings Modal */
+.settings-modal {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 25px;
+  border-radius: 15px;
+  width: 320px;
+  text-align: left;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.settings-modal h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ffd700;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.settings-modal select {
+  background-color: #444;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.settings-modal button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: linear-gradient(135deg, #ffcc00, #ff9900);
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.settings-modal button:hover {
+  background: linear-gradient(135deg, #ff9900, #ff6600);
+  transform: translateY(-3px);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  #game-title {
+    font-size: 26px;
+  }
+
+  .menu-button {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  .sound-button {
+    font-size: 16px;
+  }
+
+  .settings-modal {
+    width: 260px;
+  }
+
+  .settings-modal h2 {
+    font-size: 20px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
