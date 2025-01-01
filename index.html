@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Search Game</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  
+  <div id="main-menu">
+    <div id="logo-container">
+      <img src="images/gameslogo.png" alt="Game Logo" id="game-logo">
+    </div>
+    <h1 id="game-title">Word Search Game</h1>
+
+    <div id="menu-buttons">
+      <!-- Add an onclick event to navigate to the gameplay page -->
+      <button class="menu-button" id="start-game" onclick="window.location.href='gameplay.html'">Start Game</button>
+      <button class="menu-button" id="settings">Settings</button>
+      <button class="menu-button" id="exit-game">Exit</button>
+    </div>
+
+    <div id="sound-controls">
+      <button class="sound-button" id="toggle-music">🎵 Music: On</button>
+      <button class="sound-button" id="toggle-sound">🔊 Sound: On</button>
+    </div>
+  </div>
+
+  <audio id="background-music" loop>
+    <source src="audio/bgmusic.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div id="settings-modal" class="settings-modal" style="display: none;">
+    <h2>Settings</h2>
+    <label for="difficulty">Difficulty:</label>
+    <select id="difficulty">
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+    <br>
+    <button class="menu-button" id="close-settings">Close</button>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

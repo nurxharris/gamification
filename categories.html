@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Search Game - Select Category</title>
+    <link rel="stylesheet" href="categories.css">
+</head>
+<body>
+    <div class="container">
+        <button class="go-back-button" onclick="goBack()">⬅️ Go Back</button>
+
+        <h1>Select a Category</h1>
+        <div class="categories">
+            <div class="category-box" id="hobby" onclick="selectCategory('hobby')">
+                <div class="category-background" style="background-image: url('images/hobby.jpg');">
+                    <span class="category-name">Hobby</span>
+                </div>
+            </div>
+            <div class="category-box" id="sport" onclick="selectCategory('sport')">
+                <div class="category-background" style="background-image: url('images/sport.jpg');">
+                    <span class="category-name">Sport</span>
+                </div>
+            </div>
+            <div class="category-box" id="history" onclick="selectCategory('history')">
+                <div class="category-background" style="background-image: url('images/history.jpg');">
+                    <span class="category-name">History</span>
+                </div>
+            </div>
+            <div class="category-box" id="country" onclick="selectCategory('country')">
+                <div class="category-background" style="background-image: url('images/country.jpg');">
+                    <span class="category-name">Country</span>
+                </div>
+            </div>
+        </div>
+        
+        <div id="category-description" class="category-description">
+            <p>Select a category to begin the game!</p>
+        </div>
+
+        <div class="button-container">
+            <button class="sound-button">🔊 Sound</button>
+            <button class="continue-button" id="continue-button" onclick="continueToLevel()">Continue</button>
+            <button class="music-button">🎶 Music</button>
+        </div>
+    </div>
+
+    <script src="categories.js"></script>
+</body>
+</html>

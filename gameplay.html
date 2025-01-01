@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Search Game</title>
+    <link rel="stylesheet" href="gameplay.css">
+</head>
+<body>
+	<section>
+	<div id="sound-controls">
+      <button class="sound-button" id="toggle-music">🎵 Music: On</button>
+      <button class="sound-button" id="toggle-sound">🔊 Sound: On</button>
+    </div>
+    </section>
+	<audio id="background-music" loop>
+    <source src="audio/bgmusic.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+
+    <div class="game-container">
+        <header class="game-header">
+            <h1 class="game-title">Word Search Adventure</h1>
+            <div class="countdown-timer" id="timer">3:00</div>
+        </header>
+        <main class="game-content">
+            <div class="word-search-container">
+                <div class="word-search" id="wordSearch"></div>
+                <div class="word-list-container">
+                    <h2>Find These Words:</h2>
+                    <div class="word-list" id="wordList">
+                        <div class="word">turkey</div>
+                        <div class="word">india</div>
+                        <div class="word">japan</div>
+                        <div class="word">brazil</div>
+                        <div class="word">greece</div>
+                        <div class="word">france</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="game-footer">
+            <p>Good Luck! Find all the words before time runs out!</p>
+        </footer>
+    </div>
+
+    <div id="game-over-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="exitGame()">&times;</span>
+            <h2>Game Over</h2>
+            <p>Stars Earned: <span id="game-over-stars"></span></p>
+            <button onclick="exitGame()">Play Again</button>
+            <button onclick="window.location.href='level.html'">Select Level</button> 
+        </div>
+    </div>
+
+    <div id="you-win-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="exitGame()">&times;</span>
+            <h2>Congratulations!</h2>
+            <p>Stars Earned: <span id="win-stars"></span></p>
+            <button onclick="nextLevel()">Next Level</button>
+            <button onclick="retryLevel()">Retry</button>
+            <button onclick="window.location.href='index.html'">Main Menu</button> <!-- This line links back to index.html -->
+        </div>
+    </div>    
+	
+    <script src="gameplay.js"></script>
+</body>
+</html>
